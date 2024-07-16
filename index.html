@@ -26,53 +26,164 @@
         </ul>
     </nav>
     <main>
-        <section id="planejamento-safras">
-            <h2>Planejamento de Safras</h2>
-            <p>Ferramentas para planejamento eficiente de safras.</p>
-        </section>
-        <section id="atividades-campo">
-            <h2>Registro de Atividades de Campo</h2>
-            <p>Registre todas as atividades de campo realizadas.</p>
-        </section>
-        <section id="estoque-insumos">
-            <h2>Monitoramento de Estoque de Insumos</h2>
-            <p>Gerencie o estoque de insumos de maneira eficiente.</p>
-        </section>
-        <section id="previsao-tempo">
-            <h2>Previsão do Tempo</h2>
-            <p>Receba previsões meteorológicas atualizadas.</p>
-        </section>
-        <section id="analise-dados">
-            <h2>Análise de Dados Históricos</h2>
-            <p>Análise detalhada de dados históricos para melhor tomada de decisão.</p>
-        </section>
-        <section id="saude-plantas">
-            <h2>Monitoramento de Saúde das Plantas</h2>
-            <p>Monitoramento contínuo da saúde das plantas.</p>
-        </section>
-        <section id="relatorios-produtividade">
-            <h2>Relatórios de Produtividade</h2>
-            <p>Gere relatórios detalhados de produtividade.</p>
-        </section>
-        <section id="gestao-financeira">
-            <h2>Gestão Financeira</h2>
-            <p>Controle de despesas e receitas, análise de rentabilidade por cultura.</p>
-        </section>
-        <section id="monitoramento-solo">
-            <h2>Monitoramento de Solo</h2>
-            <p>Relatórios de nutrientes, umidade e temperatura do solo em tempo real.</p>
-        </section>
-        <section id="registro-colheitas">
-            <h2>Registro de Colheitas</h2>
-            <p>Gestão de inventário de produtos colhidos e planejamento de vendas.</p>
-        </section>
-        <section id="comercio-eletronico">
-            <h2>Comércio Eletrônico</h2>
-            <p>Marketplace para a venda direta de produtos agrícolas.</p>
-        </section>
-    </main>
-    <footer>
+        <footer>
         <p>&copy; 2024 Gestão de Fazendas e Tomada de Decisões</p>
     </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos de Gestão de Fazendas</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .chart-container {
+            width: 600px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="chart-container">
+        <canvas id="planejamentoSafras"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="saudePlantas"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="gestaoFinanceira"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="monitoramentoSolo"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="registroColheitas"></canvas>
+    </div>
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejamento de Safras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            text-align: justify;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #8f69e7;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function abrirPlanejamento() {
+            var novaJanela = window.open("", "_blank", "width=800,height=600");
+            novaJanela.document.write(`
+                <!DOCTYPE html>
+                <html lang="pt-br">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Introdução ao Planejamento de Safra</title>
+                    <style>
+                        body {
+                            font-family: Arial, sans-serif;
+                            line-height: 1.6;
+                            margin: 20px;
+                        }
+                        h1, h2 {
+                            text-align: center;
+                            color: #333;
+                        }
+                        p {
+                            text-align: justify;
+                        }
+                        .container {
+                            max-width: 800px;
+                            margin: auto;
+                        }
+                        .question {
+                            margin-top: 20px;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="container">
+                        <h1>Introdução ao Planejamento de Safra</h1>
+                        <p>Um planejamento de safra é um processo estratégico que os agricultores utilizam para otimizar a produção e a rentabilidade das colheitas. Inclui a análise do solo, escolha das culturas, preparação do solo, cronograma de plantio, manejo de pragas e doenças, irrigação, monitoramento, colheita e estratégias de comercialização. Este planejamento visa maximizar a eficiência, reduzir custos e melhorar a qualidade e a quantidade da produção agrícola.</p>
+                        <h2>Perguntas para Planejamento</h2>
+                        <div class="question">
+                            <label for="analise-solo">Análise do solo realizada? (Sim/Não): </label>
+                            <input type="text" id="analise-solo" name="analise-solo">
+                        </div>
+                        <div class="question">
+                            <label for="culturas">Quais culturas serão plantadas?: </label>
+                            <input type="text" id="culturas" name="culturas">
+                        </div>
+                        <div class="question">
+                            <label for="preparacao-solo">Preparação do solo necessária?: </label>
+                            <input type="text" id="preparacao-solo" name="preparacao-solo">
+                        </div>
+                        <div class="question">
+                            <label for="cronograma-plantio">Cronograma de plantio estabelecido?: </label>
+                            <input type="text" id="cronograma-plantio" name="cronograma-plantio">
+                        </div>
+                        <div class="question">
+                            <label for="manejo-pragas">Manejo de pragas e doenças planejado?: </label>
+                            <input type="text" id="manejo-pragas" name="manejo-pragas">
+                        </div>
+                        <div class="question">
+                            <label for="irrigacao">Estratégia de irrigação definida?: </label>
+                            <input type="text" id="irrigacao" name="irrigacao">
+                        </div>
+                        <div class="question">
+                            <label for="monitoramento">Plano de monitoramento implementado?: </label>
+                            <input type="text" id="monitoramento" name="monitoramento">
+                        </div>
+                        <div class="question">
+                            <label for="colheita">Estratégia de colheita definida?: </label>
+                            <input type="text" id="colheita" name="colheita">
+                        </div>
+                        <div class="question">
+                            <label for="comercializacao">Estratégias de comercialização estabelecidas?: </label>
+                            <input type="text" id="comercializacao" name="comercializacao">
+                        </div>
+                    </div>
+                </body>
+                </html>
+            `);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Planejamento de Safras</h1>
+        <a href="#" class="button" onclick="abrirPlanejamento()">Planejamento de Safra</a>
+    </div>
 </body>
 </html>
